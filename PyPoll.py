@@ -93,16 +93,18 @@ with open(file_to_load) as election_data:
          #  Save the candidate results to our text file.
          txt_file.write(candidate_results)  
             
-   if (votes > winning_count) and (vote_percentage>winning_percentage):     
-      winning_count = votes 
-      winning_percentage = vote_percentage
-      winning_candidate= candidate_name
+         if (votes > winning_count) and (vote_percentage>winning_percentage):     
+            winning_count = votes 
+            winning_percentage = vote_percentage
+            winning_candidate= candidate_name
 
-winning_candidate_summary = (
-   f"-------------------------\n"
-   f"Winner: {winning_candidate}\n"
-   f"Winning Vote Count: {winning_count:,}\n"
-   f"Winning Percentage: {winning_percentage:.1f}%\n"
-   f"-------------------------\n")
+      winning_candidate_summary = (
+         f"-------------------------\n"
+         f"Winner: {winning_candidate}\n"
+         f"Winning Vote Count: {winning_count:,}\n"
+         f"Winning Percentage: {winning_percentage:.1f}%\n"
+         f"-------------------------\n")
+      print(winning_candidate_summary)
+      # Save the winning candidate 's name to the test file.
+      txt_file.write(winning_candidate_summary)
       
-   
