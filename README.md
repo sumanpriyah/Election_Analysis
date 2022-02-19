@@ -64,7 +64,9 @@ file_to_save = os.path.join("analysis", "election_results.txt")
 B) The other place may be need to make change depending upon csv file provided - candidate name and county name in which row the data is provided. In this case the county name was in row 1 and candiadate name was in row 2 as indext starts from 0
 
 -Get the candidate name from each row.
+
 candidate_name = row[2]
 
 -Extract the county name from each row.
+
 county_name = row[1]
